@@ -1,0 +1,117 @@
+/* ==UserStyle==
+@name           ShuviTube
+@namespace      https://github.com/L-Webber
+@version        1.0.0
+@description    A new userstyle
+@author         Webber <y.laith.haitham.y@gmail.com>
+@homepageURL    https://github.com/L-Webber/ShuviTube
+@preprocessor   stylus
+
+--------------------------------------------
+@var checkbox darkScrollBar "Dark Scrollbar" 1
+@var checkbox firstCC "Custom Color" 1
+@advanced color customColor "Change Custom Color" #8e04f0
+@var checkbox firstBGC "Background Color" 1
+@advanced color changefstBGround "Change First Background" #232323
+
+
+
+==/UserStyle== */
+
+@-moz-document domain("www.youtube.com") {
+    if (darkScrollBar) {
+        * {
+            scrollbar-color: #2b2b2b #11111100 !important;
+            scrollbar-width: auto !important;
+        }
+    }
+    if (firstCC) {
+        .ytp-play-progress,
+        .ytp-swatch-background-color,
+        .ytp-settings-button.ytp-hd-quality-badge:after,
+        #like-bar.ytd-sentiment-bar-renderer,
+        #progress.ytd-thumbnail-overlay-resume-playback-renderer,
+        #selectionBar.paper-tabs {
+            background-color : customColor !important; 
+        }
+        ytd-playlist-panel-video-renderer[selected] #index.ytd-playlist-panel-video-renderer,
+        #byline.ytd-playlist-panel-video-renderer,
+        .ytp-video-menu-item[aria-checked="true"] .ytp-video-menu-item-now-playing,
+        .ytp-video-menu-item-author,
+        .yt-spec-button-shape-next--call-to-action.yt-spec-button-shape-next--text,
+        yt-formatted-string[ellipsis-truncate] a.yt-formatted-string:last-child,
+        #byline.ytd-video-meta-block,
+        #channel-title.ytd-channel-renderer span.ytd-channel-renderer,
+        #text.ytd-channel-name,
+        #items.yt-horizontal-list-renderer > .yt-horizontal-list-renderer:hover a.ytd-grid-video-renderer,
+        ytd-compact-video-renderer:hover #video-title.ytd-compact-video-renderer,
+        ytd-video-renderer:hover #video-title.ytd-video-renderer,
+        ytd-playlist-renderer:hover h3.ytd-playlist-renderer,
+        #content.ytd-playlist-video-renderer:hover #video-title,
+        a.yt-simple-endpoint.ytd-playlist-panel-video-renderer:hover #video-title,
+        a.yt-simple-endpoint.ytd-playlist-panel-video-renderer:hover #unplayableText,
+        .style-scope.ytd-grid-renderer.use-ellipsis:hover #video-title, #video-title:hover,
+        ytd-grid-video-renderer:hover #video-title.yt-simple-endpoint.ytd-grid-video-renderer,
+        svg g path[d="M27.9727 3.12324C27.6435 1.89323 26.6768 0.926623 25.4468 0.597366C23.2197 2.24288e-07 14.285 0 14.285 0C14.285 0 5.35042 2.24288e-07 3.12323 0.597366C1.89323 0.926623 0.926623 1.89323 0.597366 3.12324C2.24288e-07 5.35042 0 10 0 10C0 10 2.24288e-07 14.6496 0.597366 16.8768C0.926623 18.1068 1.89323 19.0734 3.12323 19.4026C5.35042 20 14.285 20 14.285 20C14.285 20 23.2197 20 25.4468 19.4026C26.6768 19.0734 27.6435 18.1068 27.9727 16.8768C28.5701 14.6496 28.5701 10 28.5701 10C28.5701 10 28.5677 5.35042 27.9727 3.12324Z"] {
+            color: customColor !important;
+        }
+        #hearted-border.ytd-creator-heart-renderer,
+        #hearted.ytd-creator-heart-renderer {
+            color: customColor !important;
+            fill: customColor !important;
+        }
+        a:hover {
+            color: customColor !important;
+            fill: customColor !important;
+        }
+        .badge-style-type-simple.ytd-badge-supported-renderer,
+        .badge-style-type-disabled.ytd-badge-supported-renderer,
+        yt-icon.ytd-badge-supported-renderer {
+            background: transparent !important;
+            color: customColor !important;
+            padding-left: 0px !important;
+            opacity: 0.7 !important;
+        }
+        #content.ytd-expander a:hover, #published-time-text.ytd-comment-renderer a:hover, #content.ytd-expander #name.ytd-author-comment-badge-renderer:hover, .yt-core-attributed-string--link-inherit-color .yt-core-attributed-string__link--call-to-action-color:hover {
+            color: customColor !important;
+            opacity: 1 !important;
+        }
+        #content.ytd-expander a, .yt-core-attributed-string--link-inherit-color .yt-core-attributed-string__link--call-to-action-color {
+            color: customColor !important;
+            opacity: 0.9;
+        }
+        #label.ytd-pinned-comment-badge-renderer {
+            color: customColor !important;
+            opacity: 0.5;
+        }
+        a.yt-simple-endpoint.yt-formatted-string:only-of-type:hover {
+            color: customColor !important;
+        }
+        .badge-style-type-live-now.ytd-badge-supported-renderer, .badge-style-type-live-now-alternate.ytd-badge-supported-renderer {
+            color: customColor !important;
+            background: transparent !important;
+            border-color: customColor !important;
+        }
+        .title:hover {
+            color: customColor !important;
+        }
+        #expand.ytd-text-inline-expander:hover, #collapse.ytd-text-inline-expander:hover {
+            color: customColor !important;
+        }
+        .yt-simple-endpoint.style-scope.yt-formatted-string {
+            color: #ccc !important;
+        }
+        
+    }
+    if (firstBGC) {
+        ytd-author-comment-badge-renderer {
+            background-color: changefstBGround !important;
+        }
+        a.yt-simple-endpoint.yt-formatted-string:only-of-type {
+            color: #eff0f1 !important;
+        }
+    }
+    
+    
+}
+
