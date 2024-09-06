@@ -3,7 +3,7 @@ A Customizable YouTube Theme
 
 ## *Features* 
 - ## Custom Color
--   | **with style** | **without style** |
+    | **with style** | **without style** |
     | :--------: | :-------: |
     |  <img src="images/with style.png"/>   |  <img src="images/without style.png"/>  |
     |  ![][b2]   |  ![][a2]  |
