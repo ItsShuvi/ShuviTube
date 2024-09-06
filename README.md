@@ -7,5 +7,4 @@ A Customizable YouTube Theme
     | :--------: | :-------: |
     |  <img src="images/custom-color/1with-style.png"/>   |  <img src="images/custom-color/1without-style.png"/>  |
     |    |    |
-[b1]: ./images/with style.png
 
