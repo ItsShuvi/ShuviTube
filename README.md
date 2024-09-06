@@ -5,7 +5,7 @@ A Customizable YouTube Theme
 - ## Custom Color
 -   | **with style** | **without style** |
     | :--------: | :-------: |
-    |  ![][b1]   |  ![][a1]  |
+    |  <img src="images/with style.png" width="400px"/>   |  <img src="images/without style.png" width="400px"/>  |
     |  ![][b2]   |  ![][a2]  |
     |  ![][b3]   |  ![][a3]  |
     |  ![][b4]   |  ![][a4]  |
