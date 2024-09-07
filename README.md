@@ -1,19 +1,19 @@
  <div align="center" font_size="24">
 
-## ShuviTube
+# ShuviTube
 
 </div>
 
 A Customizable YouTube Theme
 ## *Features* 
-- Dark Scrollbar 
+### Dark Scrollbar 
   - make the scroll bar dark <br>
-- Little Changes
+### Little Changes
   - remove the country id
   - remove the "Explore" and "More from YouTube" tabs from the drawer <br>
-- Anti Short
+### Anti Short
   - remove everything shorts-related <br>
-- Custom Color
+### Custom Color
   - let you change the usual red color of YouTube to any other color
 
 
