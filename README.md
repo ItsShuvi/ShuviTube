@@ -5,7 +5,7 @@
 </div>
 
 A Customizable YouTube Theme
-## *Features* 
+## 🌟*Features* 
 ### Dark Scrollbar 
   - make the scroll bar dark 
 ### Little Changes
