@@ -1,10 +1,9 @@
  <div align="center" >
 
 # **ShuviTube**
-A Customizable YouTube Theme  
-I hope you will like it
-</div>
 
+</div>
+A Customizable YouTube Theme  
 
 ## 🌟**Features**
 
