@@ -20,8 +20,6 @@
 @advanced color mainTxt "Main text" #eff0f1
 @advanced color dimTxt "Dim text" #ccc
 
-@var checkbox nonCustomizableChanges "non-Customizable Changes" 1
-
 
 ==/UserStyle== */
 
@@ -45,6 +43,24 @@
         #sections.ytd-guide-renderer>ytd-guide-section-renderer.ytd-guide-renderer:nth-last-child(3) {
             display : none !important;            
         }
+        #left-arrow.ytd-feed-filter-chip-bar-renderer::after,
+        #right-arrow.ytd-feed-filter-chip-bar-renderer::before,
+        yt-chip-cloud-renderer #right-arrow.yt-chip-cloud-renderer::before,
+        yt-chip-cloud-renderer #left-arrow.yt-chip-cloud-renderer::after {
+            display: none !important;
+        }
+        #guide-section-title.ytd-guide-section-renderer {
+            text-transform: uppercase !important;
+            letter-spacing: 0.5px !important;
+        }
+        img.yt-img-shadow {
+            opacity: 0.9 !important;
+        }
+        .count-text.ytd-comments-header-renderer {
+            font-size: 1.6rem !important;
+            line-height: 2.2rem !important;
+            font-weight: 400 !important;
+        }
     }
     if (antiShorts) {
         ytd-rich-section-renderer {
@@ -59,6 +75,9 @@
     }
     
     if (customColor) {
+        #cinematics.ytd-watch-flexy {
+            display: none !important;
+        }
         yt-formatted-string[ellipsis-truncate] a.yt-formatted-string:last-child, #byline.ytd-video-meta-block, #channel-title.ytd-channel-renderer span.ytd-channel-renderer, #text.ytd-channel-name {
             color: mainColor !important;
         }
@@ -236,11 +255,12 @@
             color: dimTxt !important;
         }
         .yt-spec-button-shape-next--call-to-action.yt-spec-button-shape-next--outline:hover {
-            background: sndBG !important;
+            background: hoverBG !important;
         }
         .yt-spec-button-shape-next--call-to-action.yt-spec-button-shape-next--outline {
             color: mainTxt !important;
             border-color: sndBG !important;
+            background: sndBG !important;
         }
         #progress {
             background-color: mainColor !important;
@@ -249,16 +269,73 @@
         yt-page-navigation-progress {
             background-color: transparent !important
         }
-    }
-    
-    if (nonCustomizableChanges) {
-        #left-arrow.ytd-feed-filter-chip-bar-renderer::after,
-        #right-arrow.ytd-feed-filter-chip-bar-renderer::before,
-        yt-chip-cloud-renderer #right-arrow.yt-chip-cloud-renderer::before,
-        yt-chip-cloud-renderer #left-arrow.yt-chip-cloud-renderer::after {
-            display: none !important;
+        #endpoint.yt-simple-endpoint.ytd-guide-entry-renderer, #guide-section-title.ytd-guide-section-renderer {
+            color: mainTxt !important;
+        }
+        .guide-icon.ytd-guide-entry-renderer {
+            color : dimTxt !important;
+        }
+        #sections.ytd-guide-renderer > .ytd-guide-renderer:not(:last-child), #guide-links-primary.ytd-guide-renderer, #guide-content.ytd-app {
+            border-color: hoverBG !important;
+        }
+        ytd-guide-collapsible-section-entry-renderer.ytd-guide-section-renderer:not(:first-child) {
+            border-top: 1px solid hoverBG !important;
+        }
+        ytd-macro-markers-list-item-renderer #time.ytd-macro-markers-list-item-renderer {
+            color: mainColor !important;
+            background-color: hoverBG !important;
+            opacity : 0.6 !important;
+        }
+        ytd-horizontal-card-list-renderer[modern-chapters][card-list-style=HORIZONTAL_CARD_LIST_STYLE_TYPE_ENGAGEMENT_PANEL_SECTION] #items.ytd-horizontal-card-list-renderer:before {
+            background-color: mainColor !important;
+            opacity: 0.2 !important; 
+        }
+        ytd-macro-markers-list-item-renderer:hover #time.ytd-macro-markers-list-item-renderer, ytd-macro-markers-list-item-renderer[active] #time.ytd-macro-markers-list-item-renderer {
+            color: mainColor !important;
+            background-color: hoverBG!important;
+            opacity : 1 !important;
+        }
+        ytd-macro-markers-list-item-renderer[modern][layout=MACRO_MARKERS_LIST_ITEM_RENDERER_LAYOUT_VERTICAL]:not([carousel-type=MACRO_MARKERS_LIST_ITEM_RENDERER_CAROUSEL_TYPE_TEXT_ONLY])[active] #thumbnail.ytd-macro-markers-list-item-renderer {
+            border: 2px solid mainColor !important;
+        }
+        .yt-spec-button-shape-next--call-to-action.yt-spec-button-shape-next--text {
+        color: mainColor !important;
+        }
+        .yt-spec-button-shape-next--call-to-action.yt-spec-button-shape-next--text:hover {
+            background: hoverBG !important; 
+            border-color: transparent !important;
+        }
+        .ytp-cued-thumbnail-overlay:hover .ytp-large-play-button-bg {
+            fill : mainColor !important;
+        }
+        ytd-playlist-panel-video-renderer[selected] #index.ytd-playlist-panel-video-renderer, #byline.ytd-playlist-panel-video-renderer, .ytp-video-menu-item[aria-checked="true"] .ytp-video-menu-item-now-playing, .ytp-video-menu-item-author {
+            color: mainColor !important;
+        }
+        .publisher.ytd-playlist-panel-renderer {
+            color : dimTxt !important;
+        }
+        #container.ytd-playlist-panel-renderer {
+            border-color: sndBG !important;
+        }
+        .header.ytd-playlist-panel-renderer, .playlist-items.ytd-playlist-panel-renderer, #header.ytd-engagement-panel-title-header-renderer, #content.ytd-engagement-panel-section-list-renderer, ytd-transcript-footer-renderer, ytd-transcript-segment-list-renderer {
+            background-color: sndBG !important;
+        }
+        ytd-playlist-panel-video-renderer[selected][use-color-palette], ytd-playlist-panel-video-renderer[selected][use-color-palette]:hover:not(.dragging) {
+            background-color: hoverBG !important;
+        }
+        .focused-line.tp-yt-paper-input-container {
+            border-color: mainColor !important;
+        }
+        ytd-button-renderer#submit-button.ytd-commentbox .yt-spec-button-shape-next--call-to-action.yt-spec-button-shape-next--filled {
+            background-color: mainColor !important;
+            color: mainTxt !important;
+        }
+        #home-chips, #chips-wrapper.ytd-feed-filter-chip-bar-renderer {
+            background-color: mainBG !important;
+            border-color: hoverBG !important;
         }
     }
+    
     
 }
 
