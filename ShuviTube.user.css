@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           ShuviTube
 @namespace      https://github.com/Shuvi-0
-@version        1.1.0
+@version        1.1.1
 @description    A customizable YouTube theme
 @author         Shuvi 
 @homepageURL    https://github.com/Shuvi-0/ShuviTube
@@ -25,11 +25,14 @@
 @-moz-document domain("www.youtube.com") {
 
     if (darkScrollBar) {
-        *:not(#guide-inner-content.ytd-app) {
+        *:not(#guide-inner-content.ytd-app, ytd-multi-page-menu-renderer[scrollbar-rework] .menu-container.ytd-multi-page-menu-renderer) {
             scrollbar-color: #2b2b2b #1110 !important;
             scrollbar-width: auto !important;
         }
         #guide-inner-content.ytd-app:hover {
+            scrollbar-color: #2b2b2b #1110 !important;
+        }
+        ytd-multi-page-menu-renderer[scrollbar-rework] .menu-container.ytd-multi-page-menu-renderer:hover {
             scrollbar-color: #2b2b2b #1110 !important;
         }
     }
@@ -70,6 +73,9 @@
             display: none !important;
         }
         a[title="Shorts"] {
+            display: none !important;
+        }
+        ytd-reel-shelf-renderer {
             display: none !important;
         }
     }
@@ -392,6 +398,25 @@
         }
         .ytp-swatch-color-white {
             color: mainColor !important;
+        }
+        ytd-notification-renderer.unread #new.ytd-notification-renderer {
+            background-color: mainColor !important;
+        }
+        .yt-spec-button-shape-next--mono.yt-spec-button-shape-next--text:hover {
+            background-color: transparent !important;
+        }
+        ytd-simple-menu-header-renderer {
+            background-color: hoverBG !important;
+        }
+        ytd-multi-page-menu-renderer {
+            background: sndBG !important;
+            border-color: sndBG !important;
+        }
+        ytd-simple-menu-header-renderer {
+            border-bottom: 1px solid hoverBG !important;
+        }
+        .metadata.ytd-notification-renderer {
+            color: dimTxt !important;
         }
     }
 }
