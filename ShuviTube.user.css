@@ -1,10 +1,10 @@
 /* ==UserStyle==
 @name           ShuviTube
-@namespace      https://github.com/PurpleShuvi
-@version        1.1.1
+@namespace      https://github.com/Shuvi-0
+@version        1.1.2
 @description    A customizable YouTube theme
-@author         Tune 
-@homepageURL    https://github.com/PurpleShuvi/ShuviTube
+@author         Shuvi 
+@homepageURL    https://github.com/Shuvi-0/ShuviTube
 @preprocessor   stylus
 
 --------------------------------------------
@@ -12,6 +12,8 @@
 @var checkbox littleChanges "Little Changes" 1
 @var checkbox antiShorts "Anti Shorts" 1
 @var checkbox customColor "custom Color" 1
+@var checkbox customVideoPerRow "Enable " 1
+
 
 @advanced color mainColor "Main Color" #8e04f0
 @advanced color mainBG "Main background" #111
@@ -62,6 +64,9 @@
             font-size: 1.6rem !important;
             line-height: 2.2rem !important;
             font-weight: 400 !important;
+        }
+        ytd-shelf-renderer #dismissible:has(yt-horizontal-list-renderer[grid-video-width="354"] ) {
+            display: none;
         }
     }
     
@@ -418,5 +423,17 @@
         .metadata.ytd-notification-renderer {
             color: dimTxt !important;
         }
+        yt-icon-button#creator-heart-button svg {
+            fill: mainColor !important;
+        }
+        .style-scope.ytd-page-manager.hide-skeleton, ytd-watch-flexy{
+            background-color: mainBG !important;
+        }
+        .ytp-chrome-controls .ytp-button[aria-pressed]:after {
+            background-color: mainColor !important;
+        }
+    }
+    if (customVideoPerRow) {
+        // coming soon
     }
 }
