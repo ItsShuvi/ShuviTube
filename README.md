@@ -16,14 +16,6 @@ A Customizable YouTube Theme
   - remove everything shorts-related 
 ### Custom Color
   - let you change the usual red color of YouTube to any other color
-
-
-## **Screenshots**
-| **with style** | **without style** |
-| :--------: | :-------: |
-|  ![](images/custom-color/withstyle1.png)   |  ![](images/custom-color/withoutstyle1.png)  |
-|  ![](images/custom-color/withstyle2.png)   |  ![](images/custom-color/withoutstyle2.png)  |
-|     |  |
 ## **Installation**
 
 You have to install [Stylus](https://add0n.com/stylus.html) extension and then click on the install below.
